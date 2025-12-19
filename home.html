@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez l'univers Audi : histoire, innovation et modèles emblématiques">
+    <title>Audi</title>
+    <link rel="icon" type="image/png" href="images/audi.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <!-- section header -->
+        <nav class="entete_navigation">
+            <div class="navigation">
+                <div class="logo-section">
+                    <div class="logo-circle">
+                        <img src="images/audi.png" alt="Logo Audi" class="logo-image">
+                    </div>
+                    <h1><a href="home.html" class="nav-accueil">AUDI</a></h1>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+                    <span class="menu-icon"></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="home.html" class="nav-link active">Accueil</a></li>
+                    <li><a href="histoire.html" class="nav-link">Histoire & Modèles</a></li>
+                    <li><a href="apropos.html" class="nav-link">À propos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- section accueil -->
+        <section class="hero">
+            <div class="hero-background" style="background-image: url('images/acc.png');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2 class="hero-title">Vorsprung durch Technik</h2>
+                <p class="hero-subtitle">"L'avance par la technique"</p>
+            </div>
+            <div class="hero-gradient"></div>
+        </section>
+
+        <!-- section pourquoi audi -->
+        <section class="pourquo_audi">
+            <div class="container">
+                <h3 class="section_titre">Pourquoi Audi ?</h3>
+                <div class="cards-grid">
+                    <article class="card">
+                        <div class="card-icon">1</div>
+                        <h4 class="card-title">Innovation</h4>
+                        <p class="card-text">
+                            Audi est pionnier dans les technologies automobiles avec la traction Quattro et l'électrification.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">2</div>
+                        <h4 class="card-title">Design</h4>
+                        <p class="card-text">
+                            Un style élégant et sportif reconnaissable avec la calandre Singleframe et les phares LED.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">3</div>
+                        <h4 class="card-title">Performance</h4>
+                        <p class="card-text">
+                            Des moteurs puissants et une tenue de route exceptionnelle grâce à la transmission intégrale.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- section présentation des modèles -->
+        <section class="models-section">
+            <div class="container">
+                <h3 class="section_titre">Modèles Emblématiques</h3>
+                <div class="models-grid">
+                    <article class="model-card">
+                        <div class="model-image">
+                            <img src="images/a3.png" alt="Audi RSQ3">
+                            <span class="model-name-overlay">Audi RSQ3</span>
+                        </div>
+                        <div class="model-info">
+                            <h4 class="model-title">Audi RSQ3</h4>
+                            <p class="model-description">Compacte sportive et dynamique</p>
+                        </div>
+                    </article>
+
+                    <article class="model-card">
+                        <div class="model-image model-a4">
+                            <img src="images/a5.png" alt="Audi RS6">
+                            <span class="model-name-overlay">Audi RS6</span>
+                        </div>
+                        <div class="model-info">
+                            <h4 class="model-title">Audi RS6</h4>
+                            <p class="model-description">Berline premium élégante</p>
+                        </div>
+                    </article>
+
+                    <article class="model-card">
+                        <div class="model-image model-q5">
+                            <img src="images/q5.png" alt="Audi Q5">
+                        </div>
+                        <div class="model-info">
+                            <h4 class="model-title">Audi Q5</h4>
+                            <p class="model-description">SUV familial et confortable</p>
+                        </div>
+                    </article>
+
+
+                    <article class="model-card">
+                        <div class="model-image model-etron">
+                            <img src="images/q6.png" alt="Audi Q5">
+                            <span class="model-name-overlay">Audi Q5</span>
+                        </div>
+                        <div class="model-info">
+                            <h4 class="model-title">Audi e-Q6</h4>
+                            <p class="model-description">Le Futur de l'électrique</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
