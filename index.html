@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accueil – Audi</title>
+    <link rel="stylesheet" href="acceuil.css">
+    <link rel="icon" type="image/png" href="images/audi.png">
+
+
+</head>
+
+<body>
+
+    <div class="black-overlay"></div>
+
+    <h1 class="hero-title">Welcome to Audi Airline</h1>
+
+    <div class="page-border"></div>
+
+    <button id="soundToggle" class="sound-toggle">Son OFF</button>
+
+    <div class="wrapper">
+        <div class="logo-block">
+
+            <audio id="audiSound" src="song/Audi_Airlines.mp3" preload="auto"></audio>
+
+            <svg class="audi-svg hidden" viewBox="0 0 960 260" preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+                <g class="ring-g r1">
+                    <circle class="ring-stroke" cx="190" cy="130" r="100" />
+                </g>
+                <g class="ring-g r2">
+                    <circle class="ring-stroke" cx="340" cy="130" r="100" />
+                </g>
+                <g class="ring-g r3">
+                    <circle class="ring-stroke" cx="490" cy="130" r="100" />
+                </g>
+                <g class="ring-g r4">
+                    <circle class="ring-stroke" cx="640" cy="130" r="100" />
+                </g>
+            </svg>
+
+            <div class="audi-text hidden">Audi</div>
+
+            <button id="startbouton" class="btn-rouge">
+                <img src="images/plaque.jpg" alt="" class="btn-icon">
+            </button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
