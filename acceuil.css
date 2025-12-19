@@ -1,0 +1,286 @@
+
+
+:root {
+    --bg: #000;
+    --ring: #ff0000;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("images/back.jpg") center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 1s ease-out;
+}
+
+.black-overlay.active {
+    opacity: 1;
+}
+
+.wrapper {
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hidden .ring-g {
+    animation: none;
+}
+
+.btn-rouge {
+    background: transparent;
+    color: red;
+    border: 2px solid red;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btn-icon {
+    display: block;
+    max-width: 200px;
+    height: auto;
+}
+
+@keyframes zoomAttention {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.btn-icon {
+    animation: zoomAttention 1.5s ease-in-out infinite;
+}
+
+
+
+.audi-svg {
+    display: block;
+    width: min(86vw, 980px);
+    height: auto;
+    max-height: 60vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-415px);
+    z-index: 100;
+}
+
+.ring-g {
+    opacity: 0;
+    transform: scale(0.6);
+    animation: appear 1s forwards ease;
+}
+
+.r1 { animation-delay: 1s; }
+.r2 { animation-delay: 1.35s; }
+.r3 { animation-delay: 1.7s; }
+.r4 { animation-delay: 2.05s; }
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.ring-stroke {
+    stroke: var(--ring);
+    stroke-width: 28;
+    fill: none;
+}
+
+
+.audi-text {
+    color: red;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 15px;
+    z-index: 100;
+    position: relative;
+    opacity: 0;
+    animation: fadeInText 0.8s ease-in forwards;
+    animation-delay: 4.5s;
+}
+
+.audi-text.hidden {
+    opacity: 0;
+    animation: none;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.page-border {
+    position: fixed;
+    inset: 20px;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.page-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    background:
+        linear-gradient(90deg, transparent, red, transparent) top,
+        linear-gradient(180deg, transparent, red, transparent) right,
+        linear-gradient(270deg, transparent, red, transparent) bottom,
+        linear-gradient(0deg, transparent, red, transparent) left;
+    background-size:
+        300% 8px,
+        8px 300%,
+        300% 8px,
+        8px 300%;
+    background-repeat: no-repeat;
+    animation: snakeBorder 3s linear infinite;
+}
+
+@keyframes snakeBorder {
+    0% {
+        background-position:
+            -300% 0,
+            100% -300%,
+            300% 100%,
+            0 300%;
+    }
+    25% {
+        background-position:
+            0 0,
+            100% -300%,
+            300% 100%,
+            0 300%;
+    }
+    50% {
+        background-position:
+            0 0,
+            100% 0,
+            300% 100%,
+            0 300%;
+    }
+    75% {
+        background-position:
+            0 0,
+            100% 0,
+            0 100%,
+            0 300%;
+    }
+    100% {
+        background-position:
+            0 0,
+            100% 0,
+            0 100%,
+            0 0;
+    }
+}
+
+
+
+.hero-title {
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: clamp(24px, 4vw, 48px);
+    font-weight: bold;
+    letter-spacing: 3px;
+    z-index: 100;
+}
+
+
+.sound-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border: 2px solid red;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.sound-toggle:hover {
+    background: rgba(255, 0, 0, 1);
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE ADAPTATION PC TELE TABLETTE TELEPHONE */
+
+
+@media (max-width: 768px) {
+    .audi-svg {
+        width: 95vw;
+        transform: translateX(-47.5vw);
+        left: 50%;
+    }
+    
+    .audi-text {
+        font-size: 50px;
+        letter-spacing: 10px;
+    }
+    
+    .hero-title {
+        font-size: clamp(18px, 5vw, 32px);
+        padding: 0 20px;
+    }
+    
+    .sound-toggle {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
